@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
-import { installWithConsumer } from "@neuradex/sao";
+import { installWithConsumer, updateWithConsumer } from "@neuradex/sao";
 
-installWithConsumer("claude", process.cwd());
+const args = process.argv.slice(2);
+const isUpdate = args.includes("--update");
+
+if (isUpdate) {
+  updateWithConsumer("claude", process.cwd());
+} else {
+  installWithConsumer("claude", process.cwd());
+}

@@ -377,6 +377,26 @@ Load templates and generate with design content:
 - phase1/README.md, implementation-plan.md
 - ...
 
+### Suggested Commit
+
+> ```
+> sao: [{project-name}] 🚀 Setup - {total-phases} phases
+>
+> - Phase 1: {phase-1-name}
+> - Phase 2: {phase-2-name}
+> - ...
+> ```
+>
+> Example:
+> ```
+> sao: [auth-system] 🚀 Setup - 4 phases
+>
+> - Phase 1: Database schema
+> - Phase 2: API implementation
+> - Phase 3: Frontend implementation
+> - Phase 4: Testing & verification
+> ```
+
 ### Next Steps
 
 1. Review and supplement each phase's implementation-plan.md
@@ -391,3 +411,4 @@ To start Phase 1, review the relevant README.md.
 - Ask additional questions if user requirements are ambiguous
 - Consider technical feasibility when designing phases
 - Avoid excessively granular phase breakdown (increases management overhead)
+- **Output language**: Always output results and suggested commits in the user's language

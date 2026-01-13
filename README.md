@@ -61,11 +61,21 @@ Configuration files for tools that use SAO:
 
 ## Quick Start
 
+### Install
+
 ```bash
 npx init-sao-claude
 ```
 
 This sets up `.claude/sao/concepts/` and `.claude/commands/` in your project.
+
+### Update
+
+```bash
+npx init-sao-claude --update
+```
+
+Updates SAO core files and commands while preserving your projects in `.claude/sao/projects/`.
 
 ## License
 
