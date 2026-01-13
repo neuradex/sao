@@ -1,6 +1,6 @@
 {
   "name": "@neuradex/sao",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stateful Agent Orchestration - methodology and library for AI agent state management",
   "type": "module",
   "main": "./dist/index.js",
