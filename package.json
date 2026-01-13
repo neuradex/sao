@@ -1,0 +1,44 @@
+{
+  "name": "@neuradex/sao",
+  "version": "0.1.0",
+  "description": "Stateful Agent Orchestration - methodology and library for AI agent state management",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsc && pnpm copy-templates",
+    "copy-templates": "rm -rf templates && mkdir -p templates/.claude/sao/concepts/templates templates/claude/.claude/commands && cp -r ./concepts/README.md templates/.claude/sao/concepts/ && cp -r ./concepts/templates/* templates/.claude/sao/concepts/templates/ && cp -r ./consumers/claude/* templates/claude/.claude/commands/",
+    "dev": "tsc --watch",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "agent",
+    "orchestration",
+    "sao"
+  ],
+  "author": "neuradex",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neuradex/sao.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

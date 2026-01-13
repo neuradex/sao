@@ -1,0 +1,32 @@
+{
+  "name": "init-sao-claude",
+  "version": "0.1.0",
+  "description": "Quick setup for SAO (Stateful Agent Orchestration) with Claude Code",
+  "type": "module",
+  "bin": {
+    "init-sao-claude": "./bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "keywords": [
+    "claude",
+    "ai",
+    "agent",
+    "orchestration",
+    "cli",
+    "sao"
+  ],
+  "author": "neuradex",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neuradex/sao.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@neuradex/sao": "workspace:*"
+  }
+}
