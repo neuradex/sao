@@ -165,6 +165,33 @@ Add to "Update History" section in Phase README:
 - Step status: `Not Started` → `Completed`
 - Next step: Phase {N} - Step {M+1}
 
+### Suggested Commit
+
+> ```
+> sao: [{project-name}] ✅ P{N}S{M}/{total-steps} {step-name}
+>
+> - {change-1}
+> - {change-2}
+> - {change-3}
+> ```
+>
+> Example:
+> ```
+> sao: [auth-system] ✅ P1S2/8 Database schema
+>
+> - Create users table
+> - Add migration file
+> - Generate type definitions
+> ```
+
+**Format explanation:**
+- `sao:` = SAO project commit prefix
+- `✅` = Completed indicator (after project name for quick scanning)
+- `P{N}S{M}` = Phase N, Step M (e.g., P1S2 = Phase 1, Step 2)
+- `/{total-steps}` = Total steps across all phases for progress visibility
+- Blank line + bullet list = Changes made in this step
+- Parallel commits show progress at a glance: `P1S1/8`, `P1S2/8`, `P2S1/8`...
+
 ### Next Action
 
 Run `/sao-step {project}` to start the next step.
@@ -212,6 +239,26 @@ Step status: `In Progress` (incomplete)
 - Phase 3: {name} ✅
 - Phase 4: {name} ✅
 
+### Suggested Commit (Final)
+
+> ```
+> sao: [{project-name}] 🎉 Complete
+>
+> - {phase-1-summary}
+> - {phase-2-summary}
+> - ...
+> ```
+>
+> Example:
+> ```
+> sao: [auth-system] 🎉 Complete
+>
+> - Phase 1: Database schema
+> - Phase 2: API implementation
+> - Phase 3: Frontend implementation
+> - Phase 4: Testing & verification
+> ```
+
 ### Next Action
 
 Consider moving the project to `.claude/sao/projects/completed/`.
@@ -225,3 +272,4 @@ Consider moving the project to `.claude/sao/projects/completed/`.
 - Always run tests and report results
 - If blocker occurs during implementation, report with status remaining `In Progress`
 - Meet all completion definitions (implementation, tests, build verification)
+- **Output language**: Always output results and suggested commits in the user's language
